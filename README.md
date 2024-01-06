@@ -11,7 +11,7 @@ Currently, the gallery includes the following widgets:
 
 You can see the examples below.
 
-<img src="exmaple.png" width="300" height="200">
+<img src="exmaple.png" width="400" height="1000">
 
 
 
