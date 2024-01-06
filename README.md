@@ -1,16 +1,18 @@
 # widget_gallery
 
-A new Flutter project.
+There is a simple Flutter widget gallery!
 
-## Getting Started
+You can get this application with different widgets and customize them how do you want.
+Currently, the gallery includes the following widgets: 
+- BaseButton (More convenient than the standard ElevatedButton), 
+- BaseTextField (You can quickly and easily switch to password entry mode), 
+- BigTextField(A text input field whose height can be adjusted), 
+- ActionPanel (Includes ActionPanelListTile).
 
-This project is a starting point for a Flutter application.
+You can see the examples below.
 
-A few resources to get you started if this is your first Flutter project:
+![Examples](example.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
