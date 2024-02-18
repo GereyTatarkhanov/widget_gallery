@@ -16,7 +16,7 @@ You can see the examples below.
 
 <img src="example.png" width="300" height="600">
 
-<img src="example_2.png" width="300" height="300">
+<img src="example_2.png" width="300" height="250">
 
 
 
