@@ -16,7 +16,7 @@ You can see the examples below.
 
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
 
-And also, there are some helper methotds:
+And also, there are some helper methods:
 - RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
 - extension (String) capitalize() - for capitalizing the firts letter;
 - extension (List) swap() - fo replacing two elements in list.
