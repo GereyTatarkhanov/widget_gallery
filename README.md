@@ -19,4 +19,4 @@ You can see the examples below.
 And also, there are some helper methods:
 - RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
 - extension (String) capitalize() - for capitalizing the firts letter;
-- extension (List) swap() - fo replacing two elements in list.
+- extension (List) swap(int first, int second) - for replacing two elements in list.
