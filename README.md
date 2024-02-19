@@ -15,6 +15,14 @@ Currently, the gallery includes the following widgets:
 You can see the examples below.
 
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> fbed0c473b4816852e562173bc7cc081d4f92c15
 
 And also, there are some helper methotds:
 - RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
