@@ -14,6 +14,7 @@ class BaseTextField extends StatefulWidget {
     this.fillColor = Colors.white,
     this.bordersColor = Colors.grey,
     this.addCharacterAfterText = false,
+    this.isErrorStateActive = false,
     this.characterAfterText,
     required this.controller,
     required this.labelText,
@@ -33,6 +34,7 @@ class BaseTextField extends StatefulWidget {
   final bool isPasswordTextField;
   final bool isCharactersHidden;
   final bool addCharacterAfterText;
+  final bool isErrorStateActive;
   final VoidCallback? onSuffixIconPressed;
   final VoidCallback onChanged;
 
@@ -65,7 +67,10 @@ class _BaseTextFieldState extends State<BaseTextField> {
       decoration: BoxDecoration(
           color: widget.fillColor,
           borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: widget.bordersColor)),
+          border: Border.all(
+              color: widget.isErrorStateActive
+                  ? Colors.red
+                  : widget.bordersColor)),
       child: TextField(
         textCapitalization: widget.textCapitalization,
         maxLength: widget.maxLength,
@@ -82,7 +87,9 @@ class _BaseTextFieldState extends State<BaseTextField> {
         },
         style: Theme.of(context)
             .textTheme
-            .apply(bodyColor: widget.textColor)
+            .apply(
+                bodyColor:
+                    widget.isErrorStateActive ? Colors.red : widget.textColor)
             .bodyMedium,
         decoration: InputDecoration(
             counter: const SizedBox.shrink(),

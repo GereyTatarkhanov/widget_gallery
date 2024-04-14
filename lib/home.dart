@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_gallery/helpers.dart';
 import 'widget_gallery/index.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,6 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     _baseTextfieldController = TextEditingController();
     _bigTextfieldController = TextEditingController();
+    addCharacterAfterTextInTextField('a', _bigTextfieldController);
     super.initState();
   }
 

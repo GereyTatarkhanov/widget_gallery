@@ -5,6 +5,7 @@ class BigTextField extends StatelessWidget {
   const BigTextField(
       {super.key,
       this.height,
+      this.isErrorStateActive = false,
       required this.controller,
       required this.onChanged,
       required this.labelText});
@@ -13,9 +14,11 @@ class BigTextField extends StatelessWidget {
   final Function() onChanged;
   final String labelText;
   final double? height;
+  final bool isErrorStateActive;
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Container(
       width: double.infinity,
       height: height ?? MediaQuery.of(context).size.height * 0.16,
@@ -25,7 +28,8 @@ class BigTextField extends StatelessWidget {
       ),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.grey)),
+          border:
+              Border.all(color: isErrorStateActive ? Colors.red : Colors.grey)),
       child: TextField(
         onChanged: (value) {
           onChanged();
@@ -36,6 +40,8 @@ class BigTextField extends StatelessWidget {
         maxLines: null,
         controller: controller,
         textCapitalization: TextCapitalization.sentences,
+        style: theme.textTheme.bodyMedium
+            ?.copyWith(color: isErrorStateActive ? Colors.red : Colors.black),
         decoration: InputDecoration(
             counter: const SizedBox.shrink(),
             contentPadding: const EdgeInsets.only(top: 5),

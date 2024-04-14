@@ -7,6 +7,7 @@ class BaseButton extends StatelessWidget {
     this.svgIconName,
     this.isEnabled = true,
     this.usePrefix = false,
+    this.useAnimation = true,
     required this.text,
     required this.onPressed,
   });
@@ -15,6 +16,7 @@ class BaseButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final bool usePrefix;
+  final bool useAnimation;
   final String? svgIconName;
 
   @override
@@ -25,7 +27,7 @@ class BaseButton extends StatelessWidget {
             end: isEnabled
                 ? Theme.of(context).colorScheme.inversePrimary
                 : Colors.grey.withOpacity(0.6)),
-        duration: const Duration(milliseconds: 800),
+        duration: Duration(milliseconds: useAnimation ? 800 : 0),
         builder: (context, color, child) {
           return Container(
             decoration: BoxDecoration(

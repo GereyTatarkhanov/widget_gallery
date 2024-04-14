@@ -15,16 +15,9 @@ Currently, the gallery includes the following widgets:
 You can see the examples below.
 
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
-<<<<<<< HEAD
-=======
 
-
-
-
-
->>>>>>> fbed0c473b4816852e562173bc7cc081d4f92c15
-
-And also, there are some helper methotds:
-- RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
+And also, there are some helper methods:
+- RelativeRect getClickPosition({required BuildContext context, required Offset globalPositionOffest}) - for getting  "globalPositionOffest" you gotta use the onTapDown in GestureDetector or InkWell;
+- String convertImageFileToBase64(File image, [String imageType = 'png']) - for converting image (as File) to String base64;
 - extension (String) capitalize() - for capitalizing the firts letter;
-- extension (List<T>) swap() - fo replacing two elements in list.
+- extension (List) swap(int first, int second) - for replacing two elements in list.
