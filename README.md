@@ -17,7 +17,13 @@ You can see the examples below.
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
 
 And also, there are some helper methods:
+<<<<<<< HEAD
 - RelativeRect getClickPosition({required BuildContext context, required Offset globalPositionOffest}) - for getting  "globalPositionOffest" you gotta use the onTapDown in GestureDetector or InkWell;
 - String convertImageFileToBase64(File image, [String imageType = 'png']) - for converting image (as File) to String base64;
 - extension (String) capitalize() - for capitalizing the firts letter;
 - extension (List) swap(int first, int second) - for replacing two elements in list.
+=======
+- RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
+- extension (String) capitalize() - for capitalizing the firts letter;
+- extension (List) swap(int first, int second) - for replacing two elements in list.
+>>>>>>> 246b27ca42f60ebc9f3fc9eedd433198bbf5bfc1
