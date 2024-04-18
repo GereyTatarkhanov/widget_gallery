@@ -21,6 +21,5 @@ And also, there are some helper methods:
 - String convertImageFileToBase64(File image, [String imageType = 'png']) - for converting image (as File) to String base64;
 - extension (String) capitalize() - for capitalizing the firts letter;
 - extension (List) swap(int first, int second) - for replacing two elements in list.
-- RelativeRect getDropdownMenuPosition({required BuildContext context, required TapDownDetails details}) - for getting  "details" you gotta use the onTapDown in GestureDetector or InkWell;
 - extension (String) capitalize() - for capitalizing the firts letter;
 - extension (List) swap(int first, int second) - for replacing two elements in list.
