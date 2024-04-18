@@ -17,7 +17,6 @@ You can see the examples below.
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
 
 And also, there are some helper methods:
-
 - RelativeRect getClickPosition({required BuildContext context, required Offset globalPositionOffest}) - for getting  "globalPositionOffest" you gotta use the onTapDown in GestureDetector or InkWell;
 - String convertImageFileToBase64(File image, [String imageType = 'png']) - for converting image (as File) to String base64;
 - void addCharacterAfterTextInTextfield(String character, TextEditingController controller); 
