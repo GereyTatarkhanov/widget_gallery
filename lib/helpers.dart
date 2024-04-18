@@ -54,7 +54,7 @@ String convertImageFileToBase64(File image, [String imageType = 'png']) {
 /// TextEditingController textController = TextEditingController();
 /// addCharacterAfterTextInTextField('@', textController);
 /// ```
-void addCharacterAfterTextInTextField(
+void addCharacterAfterTextInTextfield(
     String character, TextEditingController controller) {
   controller.addListener(() {
     final text = controller.text;

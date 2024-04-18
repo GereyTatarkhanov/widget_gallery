@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class ActionPanel extends StatelessWidget {
   const ActionPanel({super.key, required this.children, this.backgroundColor});
 
