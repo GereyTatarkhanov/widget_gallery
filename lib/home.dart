@@ -91,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       useIconButton: true,
                       hintText: 'Hint text',
                       text: 'Title'),
-                  const Space(),
                 ],
               ),
             ),

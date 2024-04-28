@@ -11,7 +11,8 @@ Currently, the gallery includes the following widgets:
 - ArcProgressBar (Progress bar in the form of an arc);
 - ContainerWithButton (Simple bordered container with icon button);
 - HotBottomSheet (A quick bottom sheet that gets a child of the Widget type);
-- Expandable (The custom expandable widget like ExpansionTile but more simple).
+- Expandable (The custom expandable widget like ExpansionTile but more simple) 
+  (This widget is not in the screenshots because it is invisible and child is required).
 
 You can see the examples below.
 
