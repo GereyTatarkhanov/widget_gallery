@@ -50,13 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  BaseTextField(
+                  BaseTextfield(
                     controller: _baseTextfieldController,
                     labelText: 'Label',
                     onChanged: () {},
                   ),
                   const Space(),
-                  BigTextField(
+                  BigTextfield(
                     controller: _bigTextfieldController,
                     labelText: 'Label',
                     onChanged: () {},
@@ -90,7 +90,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       useHintText: true,
                       useIconButton: true,
                       hintText: 'Hint text',
-                      text: 'Title')
+                      text: 'Title'),
+                  const Space(),
                 ],
               ),
             ),

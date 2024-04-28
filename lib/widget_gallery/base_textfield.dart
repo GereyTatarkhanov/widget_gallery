@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BaseTextField extends StatefulWidget {
-  const BaseTextField({
+class BaseTextfield extends StatefulWidget {
+  const BaseTextfield({
     super.key,
     this.maxLength = 60,
     this.keyboardType = TextInputType.text,
@@ -39,10 +39,10 @@ class BaseTextField extends StatefulWidget {
   final VoidCallback onChanged;
 
   @override
-  State<BaseTextField> createState() => _BaseTextFieldState();
+  State<BaseTextfield> createState() => _BaseTextFieldState();
 }
 
-class _BaseTextFieldState extends State<BaseTextField> {
+class _BaseTextFieldState extends State<BaseTextfield> {
   // final MaskTextInputFormatter phoneNumberFormatter =
   //     MaskTextInputFormatter(mask: '+7 (###) ###-##-##');
 

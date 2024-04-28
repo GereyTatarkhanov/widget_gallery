@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class BigTextField extends StatelessWidget {
-  const BigTextField(
+class BigTextfield extends StatelessWidget {
+  const BigTextfield(
       {super.key,
       this.height,
       this.isErrorStateActive = false,
