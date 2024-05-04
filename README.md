@@ -13,10 +13,14 @@ Currently, the gallery includes the following widgets:
 - HotBottomSheet (A quick bottom sheet that gets a child of the Widget type);
 - Expandable (The custom expandable widget like ExpansionTile but more simple) 
   (This widget is not in the screenshots because it is invisible and child is required).
+- Carousel (Carousel slider widget without any packages);  
 
 You can see the examples below.
 
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
+
+There is the Carousel widget
+![Carousel](carousel_gif.gif)
 
 And also, there are some helper methods:
 - RelativeRect getClickPosition({required BuildContext context, required Offset globalPositionOffest}) - for getting  "globalPositionOffest" you gotta use the onTapDown in GestureDetector or InkWell;

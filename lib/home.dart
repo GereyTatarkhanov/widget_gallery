@@ -11,14 +11,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late TextEditingController _baseTextfieldController;
-  late TextEditingController _bigTextfieldController;
+  late final TextEditingController _baseTextfieldController;
+  late final TextEditingController _bigTextfieldController;
+  late final List<String> carouselItems;
 
   @override
   void initState() {
     _baseTextfieldController = TextEditingController();
     _bigTextfieldController = TextEditingController();
-
+    carouselItems = List<String>.generate(10, (index) => 'Item $index');
     super.initState();
   }
 
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return GestureDetector(
         onTap: FocusScope.of(context).unfocus,
         child: Scaffold(
@@ -91,6 +93,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       useIconButton: true,
                       hintText: 'Hint text',
                       text: 'Title'),
+                  const Space(),
+                  Carousel(
+                    height: 200,
+                    itemCount: carouselItems.length,
+                    viewportFraction: 0.9,
+                    builder: (index) {
+                      return Card(
+                        color: theme.colorScheme.inversePrimary,
+                        elevation: 2,
+                        child: Center(
+                          child: Text(
+                            carouselItems[index],
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 22),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
