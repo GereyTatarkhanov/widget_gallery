@@ -20,7 +20,7 @@ You can see the examples below.
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
 
 There is the Carousel widget
-![Carousel](carousel_gif.gif)
+<img src="carousel_gif.gif" width="300" height="300">
 
 And also, there are some helper methods:
 - RelativeRect getClickPosition({required BuildContext context, required Offset globalPositionOffest}) - for getting  "globalPositionOffest" you gotta use the onTapDown in GestureDetector or InkWell;
