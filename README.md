@@ -20,6 +20,7 @@ You can see the examples below.
 <img src="example.png" width="300" height="600">  <img src="example_2.png" width="300" height="200">
 
 There is the Carousel widget
+
 <img src="carousel_gif.gif" width="300" height="300">
 
 And also, there are some helper methods:
