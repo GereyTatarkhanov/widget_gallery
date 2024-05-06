@@ -6,4 +6,5 @@ export 'big_textfield.dart';
 export 'carousel.dart';
 export 'container_with_button.dart';
 export 'expandable.dart';
+export 'expandable_page_view.dart';
 export 'hot_bottom_sheet.dart';

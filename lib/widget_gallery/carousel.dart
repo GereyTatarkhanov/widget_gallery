@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'index.dart';
+
 //Main Widget
 class Carousel extends StatefulWidget {
   const Carousel(
       {super.key,
       required this.itemCount,
-      required this.height,
       required this.builder,
       this.padEnds = true,
       this.viewportFraction = 0.8,
@@ -13,7 +14,7 @@ class Carousel extends StatefulWidget {
       this.width});
 
   final int itemCount;
-  final double height;
+
   final double? width;
   final bool padEnds;
   final void Function(int index)? onPageChanged;
@@ -45,27 +46,23 @@ class _CarouselState extends State<Carousel> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: widget.height,
-      width: widget.width,
-      child: PageView.builder(
-        padEnds: widget.padEnds,
-        itemCount: widget.itemCount,
-        controller: controller,
-        onPageChanged: (index) {
-          setState(() {
-            widget.onPageChanged?.call(index);
-            _index = index;
-          });
-        },
-        itemBuilder: (context, index) {
-          return AnimatedPadding(
-              duration: const Duration(milliseconds: 400),
-              curve: Curves.fastOutSlowIn,
-              padding: EdgeInsets.all(_index == index ? 0.0 : 9.0),
-              child: widget.builder.call(index));
-        },
-      ),
+    return ExpandablePageView.builder(
+      padEnds: widget.padEnds,
+      itemCount: widget.itemCount,
+      controller: controller,
+      onPageChanged: (index) {
+        setState(() {
+          widget.onPageChanged?.call(index);
+          _index = index;
+        });
+      },
+      itemBuilder: (context, index) {
+        return AnimatedPadding(
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.fastOutSlowIn,
+            padding: EdgeInsets.all(_index == index ? 0.0 : 9.0),
+            child: widget.builder.call(index));
+      },
     );
   }
 }

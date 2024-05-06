@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {},
                   ),
                   const Space(),
+                  const Space(),
                   ActionPanel(
                       children: List<ActionPanelListTile>.generate(
                     3,
@@ -95,18 +96,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       text: 'Title'),
                   const Space(),
                   Carousel(
-                    height: 200,
                     itemCount: carouselItems.length,
                     viewportFraction: 0.9,
                     builder: (index) {
-                      return Card(
-                        color: theme.colorScheme.inversePrimary,
-                        elevation: 2,
-                        child: Center(
-                          child: Text(
-                            carouselItems[index],
-                            style: const TextStyle(
-                                color: Colors.white, fontSize: 22),
+                      return SizedBox(
+                        height: index % 2 == 0 ? 200 : 250,
+                        child: Card(
+                          color: theme.colorScheme.inversePrimary,
+                          elevation: 2,
+                          child: Center(
+                            child: Text(
+                              carouselItems[index],
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 22),
+                            ),
                           ),
                         ),
                       );
