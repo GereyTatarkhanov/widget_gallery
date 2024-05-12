@@ -47,22 +47,21 @@ class _CarouselState extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView.builder(
-      padEnds: widget.padEnds,
-      itemCount: widget.itemCount,
-      controller: controller,
-      onPageChanged: (index) {
-        setState(() {
-          widget.onPageChanged?.call(index);
-          _index = index;
+        padEnds: widget.padEnds,
+        itemCount: widget.itemCount,
+        controller: controller,
+        onPageChanged: (index) {
+          setState(() {
+            widget.onPageChanged?.call(index);
+            _index = index;
+          });
+        },
+        itemBuilder: (context, index) {
+          return AnimatedPadding(
+              duration: const Duration(milliseconds: 400),
+              curve: Curves.fastOutSlowIn,
+              padding: EdgeInsets.all(_index == index ? 0.0 : 9.0),
+              child: widget.builder.call(index));
         });
-      },
-      itemBuilder: (context, index) {
-        return AnimatedPadding(
-            duration: const Duration(milliseconds: 400),
-            curve: Curves.fastOutSlowIn,
-            padding: EdgeInsets.all(_index == index ? 0.0 : 9.0),
-            child: widget.builder.call(index));
-      },
-    );
   }
 }
