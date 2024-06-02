@@ -19,42 +19,45 @@ class BaseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
-        tween: ColorTween(
-            end: isEnabled
-                ? Theme.of(context).colorScheme.inversePrimary
-                : Colors.grey.withOpacity(0.6)),
-        duration: const Duration(milliseconds: 600),
-        builder: (context, color, child) {
-          return ElevatedButton(
-              onPressed: isEnabled ? onPressed : null,
-              style: ButtonStyle(
-                overlayColor:
-                    MaterialStatePropertyAll(Colors.black.withOpacity(0.1)),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                backgroundColor: MaterialStatePropertyAll(color),
-                padding: const MaterialStatePropertyAll(
-                    EdgeInsets.symmetric(vertical: 14)),
-                elevation: const MaterialStatePropertyAll(0),
+      tween: ColorTween(
+        end: isEnabled
+            ? Theme.of(context).colorScheme.inversePrimary
+            : Colors.grey.withOpacity(0.6),
+      ),
+      duration: const Duration(milliseconds: 600),
+      builder: (context, color, child) {
+        return ElevatedButton(
+          onPressed: isEnabled ? onPressed : null,
+          style: ButtonStyle(
+              overlayColor: WidgetStatePropertyAll(
+                Colors.black.withOpacity(0.1),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  usePrefix
-                      // ? SvgPicture.asset('${Constants.svgPath}$svgIconName')
-                      ? const Icon(Icons.abc)
-                      : const SizedBox(),
-                  const SizedBox(width: 4),
-                  //AutoSizeText
-                  Text(
-                    text,
-                    style: const TextStyle(color: Colors.white),
-                  ),
-                ],
-              ));
-        });
+              shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              backgroundColor: WidgetStatePropertyAll(color),
+              padding: const WidgetStatePropertyAll(
+                  EdgeInsets.symmetric(vertical: 14)),
+              elevation: const WidgetStatePropertyAll(0)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              usePrefix
+                  // ? SvgPicture.asset('${Constants.svgPath}$svgIconName')
+                  ? const Icon(Icons.abc)
+                  : const SizedBox(),
+              const SizedBox(width: 4),
+              //AutoSizeText
+              Text(
+                text,
+                style: const TextStyle(color: Colors.white),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

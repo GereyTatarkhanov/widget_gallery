@@ -65,12 +65,12 @@ class _BaseTextFieldState extends State<BaseTextfield> {
         right: 12,
       ),
       decoration: BoxDecoration(
-          color: widget.fillColor,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(
-              color: widget.isErrorStateActive
-                  ? Colors.red
-                  : widget.bordersColor)),
+        color: widget.fillColor,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+            color:
+                widget.isErrorStateActive ? Colors.red : widget.bordersColor),
+      ),
       child: TextField(
         textCapitalization: widget.textCapitalization,
         maxLength: widget.maxLength,
@@ -115,19 +115,21 @@ class _BaseTextFieldState extends State<BaseTextfield> {
   }
 
   void addCharacterAfterText(String character) {
-    widget.controller.addListener(() {
-      final text = widget.controller.text;
-      if (!text.contains(character)) {
-        widget.controller.text += ' $character';
-        widget.controller.selection = TextSelection.fromPosition(
-          TextPosition(offset: widget.controller.text.length - 2),
-        );
-      }
-      if (widget.controller.selection.end == widget.controller.text.length) {
-        widget.controller.selection = TextSelection.fromPosition(
-          TextPosition(offset: widget.controller.text.length - 2),
-        );
-      }
-    });
+    widget.controller.addListener(
+      () {
+        final text = widget.controller.text;
+        if (!text.contains(character)) {
+          widget.controller.text += ' $character';
+          widget.controller.selection = TextSelection.fromPosition(
+            TextPosition(offset: widget.controller.text.length - 2),
+          );
+        }
+        if (widget.controller.selection.end == widget.controller.text.length) {
+          widget.controller.selection = TextSelection.fromPosition(
+            TextPosition(offset: widget.controller.text.length - 2),
+          );
+        }
+      },
+    );
   }
 }
