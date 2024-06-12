@@ -14,6 +14,7 @@ Currently, the gallery includes the following widgets:
 - Expandable (The custom expandable widget like ExpansionTile but more simple) 
   (This widget is not in the screenshots because it is invisible and child is required).
 - Carousel (Carousel slider widget without any packages);  
+- InheritedAdvanced (The reduced version of Provider. Look at example in the folder)
 
 You can see the examples below.
 
@@ -32,3 +33,5 @@ And also, there are some helper methods:
 Extension methods:
 - extension (String) capitalize() - for capitalizing the firts letter;
 - extension (List) swap(int first, int second) - for replacing two elements in list.
+
+
